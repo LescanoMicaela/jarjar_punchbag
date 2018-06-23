@@ -1,4 +1,4 @@
-new Vue({
+var vue = new Vue({
 	el:'#vue-app',
 	data:{
 		message: "Punch him",
