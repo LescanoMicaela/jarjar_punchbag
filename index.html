@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<link rel="icon" href="/images/icon.png" type="image/x-icon"/>
+		<title>Jar Jar Punching Bag</title>
+		<link href="styles/style.css" rel="stylesheet">
+		<script src="https:/unpkg.com/vue"></script>
+	</head>
+	<body>
+		<div id="vue-app">
+			<h1>{{ message }}</h1>
+			<div @click="punchHim()" id="punchBag" :class="{punch : punch, dead : ended, firstPunch: firstPunch, nearlyDead: nearlyDead}">
+			</div>
+			
+			<div id="health">
+				<div :class="{colorFirst: firstPunch , colorNearly: nearlyDead}" v-bind:style="{width: health + '%'}"></div>
+			</div>
+			
+			<div id="controls">
+				<button @click="restart()" v-show="ended">Restart</button>
+			</div>
+			
+		</div>
+		
+		
+		
+		
+		<script src="js/mainvue.js"></script>
+	</body>
+	
+</html>
