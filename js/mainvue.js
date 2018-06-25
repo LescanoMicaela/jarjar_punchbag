@@ -10,7 +10,7 @@ var vue = new Vue({
 	},
 	methods:{
 		punchHim: function(){
-			var audio = new Audio('/audio/jarjar.mp3');
+			var audio = new Audio('audio/jarjar.mp3');
 			audio.pause();
 			this.health -= 10;
 			console.log(this.health)
